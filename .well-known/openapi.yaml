@@ -2,7 +2,7 @@ openapi: 3.0.0
 info:
   title: Retrieval Plugin API
   version: 1.0.0
-  description: This API lets you search through the Lex Fridman podcasts.
+  description: This API lets you search through the James Birggs Youtube Videos.
 servers:
   - url: https://ask-lex-ti7zy.ondigitalocean.app
 paths:
@@ -136,7 +136,7 @@ components:
       properties:
         queries:
           type: array
-          description: "This is an array of search query objects, each containing a natural language query string ('query') and an optional metadata filter ('filter'). Filters can help refine search results based on criteria such as document title or time period, these are particularly useful when a user asks for more information about a particular record, for example, the user may ask for more information after provided with information from a podcast with the title 'Our AI future with ChatGPT', in that case the filter field can be used to return more information by using {'title': 'Our AI future with ChatGPT'}. You can send multiple queries to compare information from different sources or break down complex questions into sub-questions."
+          description: "This is an array of search query objects, each containing a natural language query string ('query') and an optional metadata filter ('filter'). Filters can help refine search results based on criteria such as document title or time period, these are particularly useful when a user asks for more information about a particular record, for example, the user may ask for more information after provided with information from a video with the title 'Building a ChatGPT Plugin for Lex Fridman Podcasts', in that case the filter field can be used to return more information by using {'title': 'Building a ChatGPT Plugin for Lex Fridman Podcasts'}. You can send multiple queries to compare information from different sources or break down complex questions into sub-questions."
           items:
             $ref: "#/components/schemas/Query"
     QueryResponse:
